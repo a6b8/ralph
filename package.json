@@ -20,8 +20,16 @@
         "prd",
         "orchestration"
     ],
-    "author": "",
+    "author": "a6b8",
     "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/a6b8/ralphLoop.git"
+    },
+    "bugs": {
+        "url": "https://github.com/a6b8/ralphLoop/issues"
+    },
+    "homepage": "https://github.com/a6b8/ralphLoop#readme",
     "engines": {
         "node": ">=22.0.0"
     },
