@@ -1,0 +1,10 @@
+{
+    "version": "1.0.0",
+    "defaultSet": "prd-generator",
+    "cli": {
+        "headline": {
+            "text": "Ralph",
+            "font": "Slant"
+        }
+    }
+}

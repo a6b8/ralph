@@ -1,0 +1,36 @@
+{
+    "name": "ralph-loop",
+    "version": "0.1.0",
+    "description": "Node.js orchestration for Ralph autonomous agent workflow",
+    "type": "module",
+    "bin": {
+        "ralph": "./src/index.mjs"
+    },
+    "main": "./src/index.mjs",
+    "scripts": {
+        "start": "node src/index.mjs",
+        "test": "NODE_OPTIONS='--experimental-vm-modules' jest",
+        "test:coverage:src": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage --collectCoverageFrom='src/**/*.mjs'",
+        "test:file": "NODE_OPTIONS='--experimental-vm-modules' jest"
+    },
+    "keywords": [
+        "ralph",
+        "claude",
+        "automation",
+        "prd",
+        "orchestration"
+    ],
+    "author": "",
+    "license": "MIT",
+    "engines": {
+        "node": ">=22.0.0"
+    },
+    "dependencies": {
+        "chalk": "^5.4.1",
+        "figlet": "^1.8.0",
+        "inquirer": "^12.3.0"
+    },
+    "devDependencies": {
+        "jest": "^30.2.0"
+    }
+}

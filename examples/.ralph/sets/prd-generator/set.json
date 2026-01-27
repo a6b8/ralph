@@ -1,0 +1,51 @@
+{
+    "name": "prd-generator",
+    "description": "Ralph templates for generating PRDs from Meta-PRD",
+    "version": "1.0.0",
+    "systemPrompt": "system.prompt.md",
+    "conversion": [
+        {
+            "tool": "claude",
+            "options": {
+                "dangerouslySkipPermissions": true,
+                "verbose": true,
+                "outputFormat": "stream-json"
+            },
+            "outputSchema": {
+                "type": "object",
+                "required": [ "id", "title", "userStories", "targetDirs", "branchName" ],
+                "properties": {
+                    "id": { "type": "string" },
+                    "title": { "type": "string" },
+                    "branchName": { "type": "string" },
+                    "targetDirs": { "type": "array" },
+                    "userStories": { "type": "array", "minItems": 1 }
+                }
+            }
+        }
+    ],
+    "task": [
+        {
+            "tool": "claude",
+            "options": {
+                "dangerouslySkipPermissions": true,
+                "verbose": true,
+                "outputFormat": "stream-json"
+            },
+            "skipContext": false,
+            "outputSchema": {
+                "type": "object",
+                "required": [ "id", "status", "passes", "securityCheck" ],
+                "properties": {
+                    "id": { "type": "string" },
+                    "status": { "type": "string", "enum": [ "completed", "failed", "blocked", "pending" ] },
+                    "passes": { "type": "boolean" },
+                    "securityCheck": { "type": "object" },
+                    "commits": { "type": "array" },
+                    "changedFiles": { "type": "array" },
+                    "generatedPrds": { "type": "array" }
+                }
+            }
+        }
+    ]
+}
