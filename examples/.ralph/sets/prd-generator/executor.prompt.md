@@ -80,8 +80,8 @@ For each repository in affected repos:
 
 ### 2. PRD Generation
 - Generate the PRD following the guidelines above
-- Write the PRD file to `.ralph-prds/` folder in the working directory
-- Create the folder if it doesn't exist: `mkdir -p .ralph-prds`
+- Write the PRD file to `.ralph/` folder in the working directory
+- Create the folder if it doesn't exist: `mkdir -p .ralph`
 - Filename format: `{PRD-ID}.prd.md` (e.g., `PRD-AUTH-001.prd.md`)
 - Use `.prd.md` extension
 
@@ -147,7 +147,7 @@ Return the updated task as JSON with these fields updated:
     "changedFiles": [
         {
             "repo": "working-dir",
-            "path": ".ralph-prds/PRD-XXX-NNN.prd.md",
+            "path": ".ralph/PRD-XXX-NNN.prd.md",
             "action": "created"
         }
     ],
@@ -155,7 +155,7 @@ Return the updated task as JSON with these fields updated:
         {
             "prdId": "PRD-XXX-NNN",
             "filename": "PRD-XXX-NNN.prd.md",
-            "path": ".ralph-prds/PRD-XXX-NNN.prd.md"
+            "path": ".ralph/PRD-XXX-NNN.prd.md"
         }
     ],
     "criticalNotes": [],

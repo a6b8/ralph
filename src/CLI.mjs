@@ -244,7 +244,7 @@ class CLI {
 
 
     async #setPrdFolder() {
-        const defaultPrdFolder = '.ralph-prds'
+        const defaultPrdFolder = '.ralph'
 
         const { prdFolder } = await inquirer.prompt( [
             {

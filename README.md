@@ -58,7 +58,7 @@ $ ralph
               /_/                              /_/
 
 ? Config folder: ~/.ralph
-? PRD folder: .ralph-prds
+? PRD folder: .ralph
 ? Select PRD files:
   PRD-001-auth.ralph                [NOT STARTED]
   PRD-002-payments.ralph            [IN PROGRESS 2/5]
